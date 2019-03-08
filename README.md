@@ -8,6 +8,6 @@
 
 ## CDN (Content Delivery Network)
   - Source: https://unpkg.com/
-  - Format: unpkg.com/:package@:version/:file
+  - Format: ```unpkg.com/:package@:version/:file```
   - Vue CDN: https://unpkg.com/vue
   - Vuex CDN: https://unpkg.com/vuex
