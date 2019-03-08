@@ -8,6 +8,7 @@
 
 ## CDN (Content Delivery Network)
   - Source: https://unpkg.com/
+    > unpkg is a fast, global content delivery network for everything on npm. Use it to quickly and easily load any file from any package using a URL like:
   - Format: ```unpkg.com/:package@:version/:file```
   - Vue CDN: https://unpkg.com/vue
   - Vuex CDN: https://unpkg.com/vuex
