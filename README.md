@@ -5,4 +5,9 @@
 - [[vuejs.org][chs] vue.js](https://cn.vuejs.org/v2/guide/index.html)
 - [[vuejs.org][en] vue.js](https://vuejs.org/v2/guide/)
 - [[vuejs.org/][en] vuex](https://vuex.vuejs.org/)
-  - CDN: https://unpkg.com/vuex
+
+## CDN (Content Delivery Network)
+  - Source: https://unpkg.com/
+  - Format: unpkg.com/:package@:version/:file
+  - Vue CDN: https://unpkg.com/vue
+  - Vuex CDN: https://unpkg.com/vuex
