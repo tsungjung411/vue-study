@@ -5,6 +5,7 @@
 - [[vuejs.org][chs] vue.js](https://cn.vuejs.org/v2/guide/index.html)
 - [[vuejs.org][en] vue.js](https://vuejs.org/v2/guide/)
 - [[vuejs.org/][en] vuex](https://vuex.vuejs.org/)
+- [vue & vuex 10 - 什麼是 vuex?](https://ithelp.ithome.com.tw/articles/10185686)
 
 ## CDN (Content Delivery Network)
   - Source: https://unpkg.com/
