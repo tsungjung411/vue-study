@@ -6,6 +6,8 @@
 - [[vuejs.org][en] vue.js](https://vuejs.org/v2/guide/)
 - [[vuejs.org/][en] vuex](https://vuex.vuejs.org/)
 - [vue & vuex 10 - 什麼是 vuex?](https://ithelp.ithome.com.tw/articles/10185686)
+- 當地語系化(localization
+  - [Vue I18n](https://kazupon.github.io/vue-i18n/started.html#html)
 
 ## CDN (Content Delivery Network)
   - Source: https://unpkg.com/
@@ -13,3 +15,4 @@
   - Format: ```unpkg.com/:package@:version/:file```
   - Vue CDN: https://unpkg.com/vue
   - Vuex CDN: https://unpkg.com/vuex
+  - Vue-i18n CDN: https://unpkg.com/vue-i18n (locale/language/internationalization)
