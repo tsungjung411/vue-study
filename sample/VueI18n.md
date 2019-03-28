@@ -1,4 +1,5 @@
 
+## VueI18n 程式碼範例
 ```html=
 <html>
 <body>
@@ -49,3 +50,15 @@
 </body>
 </html>
 ```
+
+<br>
+
+## 執行結果
+### locale = 'tw'
+![](../images/i18n-sample-tw.png)
+
+### locale = 'en'
+![](../images/i18n-sample-en.png)
+
+### locale = 'jp'
+![](../images/i18n-sample-jp.png)
