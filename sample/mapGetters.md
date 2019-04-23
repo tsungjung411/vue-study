@@ -1,22 +1,26 @@
 
-```thml
+## mapGetters 程式碼範例
+- mapGetters
+- watch mapGetters
+
+```html
 <html>
 <body>
 
-    <div id="root">
+	<div id="root">
 		<button @click="onClick">[1] change the language</button>
 		<br>
 		<div>Result: 
 			<br>language1: {{language1}}
 			<br>language2: {{language2}}
 		</div>
-    </div>
+	</div>
 
-    <script src="https://unpkg.com/vue" ></script>
-    <script src="https://unpkg.com/vuex" ></script>
+	<script src="https://unpkg.com/vue" ></script>
+	<script src="https://unpkg.com/vuex" ></script>
 
-    <script>
-        'use strict'
+	<script>
+		'use strict'
 
 		const store = new Vuex.Store({
 			state: {
@@ -38,10 +42,10 @@
 			}
 		});
 
-        new Vue({
-            el: "#root",
+		new Vue({
+			el: "#root",
 			store: store,
-            methods: {
+			methods: {
 				onClick: function() {
 					console.log('>> onClick:state:', this.$store.state);
 					let state = this.$store.state;
@@ -71,8 +75,8 @@
 					console.log(' - oldValue:', oldValue);
 				}
 			}
-        })
-    </script>
+		})
+	</script>
 </body>
 </html>
 ```
