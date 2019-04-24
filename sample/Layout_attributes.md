@@ -19,6 +19,7 @@
   - the # of columns always add up to 12. It can be less than twelve,
   
 - grid 為何要分 12 格? 可能的解釋如下：
+  > ![](../master/images/grid-mode.png)
   > 12 剛好是 1, 2, 3, 4, 6 的最小公倍數
   > <br>有 5 種模式，可以方便配置適當的排版
   > <br>模式1：1 1 1 1 1 1 1 1 1 1 1 1
