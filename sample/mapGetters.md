@@ -60,6 +60,7 @@
                 },
             },
             computed: {
+                // import {mapGetters} from 'vuex'; // for the non-CDN environment
                 ...Vuex.mapGetters({
                     language1: 'getLanguage1',
                     language2: 'getLanguage2',
