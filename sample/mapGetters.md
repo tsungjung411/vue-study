@@ -2,6 +2,8 @@
 ## mapGetters 程式碼範例
 - mapGetters
 - watch mapGetters
+  - 底下有兩個 mapGetter，一個有參考到 state.lang，另一個沒有參考到
+  - 當 state.lang 變更時，觀察 mapGetter 被觸發的 log, 以及 watch 的 log
 
 ```html
 <html>
