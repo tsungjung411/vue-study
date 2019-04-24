@@ -10,7 +10,7 @@
 <body>
 
     <div id="root">
-        <button @click="onClick">[1] change the language</button>
+        <button @click="onClick">change the language</button>
         <br>
         <div>Result: 
             <br>language1: {{language1}}
