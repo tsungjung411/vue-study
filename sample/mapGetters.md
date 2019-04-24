@@ -64,6 +64,11 @@
                 }),
             },
             watch: {
+                // The following definitions are all legal.
+                // language1(newValue, oldValue) {
+                // language1: (newValue, oldValue) => {
+                // language1: function(newValue, oldValue) {
+                
                 language1(newValue, oldValue) {
                     console.log('watch: language1:');
                     console.log(' - newValue:', newValue);
