@@ -26,4 +26,5 @@
     - pa / pt / pb / pl / pr / px / py
   - 補充說明
     - 他們的關係：外邊界|邊框|內邊界
+      <br>![](https://developer.mozilla.org/files/4045/margin-bottom.svg)
     - a(all-sides), t(top), b(bottom), l(left), r(right), x(x-axis), y(y-axis)
