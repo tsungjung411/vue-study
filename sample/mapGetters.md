@@ -83,9 +83,9 @@
 
 ## 個人對 mapGetters 的看法
 > mapGetters 表面上看起來就像 API 
-但實質上只是 computed state，就當作是一種屬性
-所以能 watch 屬性變動，也就不足為奇
+> <br>但實質上只是 computed state，就當作是一種屬性
+> <br>所以能 watch 屬性變動，也就不足為奇
 
 > mapGetters 的 API
-parser 會去解析出：有哪些 state 變數依賴於那些 API
-當 state 變數有變動，就會觸發相依的 API
+> <br>parser 會去解析出：有哪些 state 變數依賴於那些 API
+> <br>當 state 變數有變動，就會觸發相依的 API
