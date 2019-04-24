@@ -1,5 +1,16 @@
 
 ## Vuetify grid layout v-layout v-flex 參數設定
+- [margin/padding values](https://v4-alpha.getbootstrap.com/utilities/spacing/)
+  - m: margin (外邊界)
+    - ma / mt / mb / ml / mr / mx / my
+  - p: padding (內邊界/內距)
+    - pa / pt / pb / pl / pr / px / py
+  - 補充說明
+    - 他們的關係：外邊界|邊框|內邊界
+      <br>![](https://developer.mozilla.org/files/4045/margin-bottom.svg)
+    - a(all-sides), t(top), b(bottom), l(left), r(right), x(x-axis), y(y-axis)
+      <br><br>
+      
 - [Meaning of numbers in “col-md-4”,“ col-xs-1”, “col-lg-2” in Bootstrap](https://stackoverflow.com/questions/24175998/meaning-of-numbers-in-col-md-4-col-xs-1-col-lg-2-in-bootstrap)
   - xs = extra small screens (mobile phones)
   - sm = small screens (tablets)
@@ -19,12 +30,4 @@
 
 - [Bootstrap: Grid system](https://getbootstrap.com/docs/4.1/layout/grid/)
 - [Vuetify: Grid system](https://vuetifyjs.com/en/framework/grid)
-- [margin/padding values](https://v4-alpha.getbootstrap.com/utilities/spacing/)
-  - m: margin (外邊界)
-    - ma / mt / mb / ml / mr / mx / my
-  - p: padding (內邊界/內距)
-    - pa / pt / pb / pl / pr / px / py
-  - 補充說明
-    - 他們的關係：外邊界|邊框|內邊界
-      <br>![](https://developer.mozilla.org/files/4045/margin-bottom.svg)
-    - a(all-sides), t(top), b(bottom), l(left), r(right), x(x-axis), y(y-axis)
+
