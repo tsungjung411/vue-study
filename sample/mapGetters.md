@@ -34,7 +34,7 @@
 				},
 				getLanguage2: (state) => {
 					// not refer to the state.lang
-					// so this method won't be called when changing state.lang
+					// so this method won't be triggered when changing state.lang
 					const lang = 'state.lang';
 					console.log("called getLanguage2(): ", lang);
 					return lang;
