@@ -1,0 +1,125 @@
+<html>
+
+<body>
+<div id="root">
+	<form method="get" action="process.htm">
+		<ul style="list-style-type: none;">
+			<li>
+				<label>Account:</label>
+				<input name="account" v-model="account"/>
+			</li>
+			<li>
+				<label>Password:</label>
+				<input name="password" v-model="password" />
+			</li>
+		</ul>
+
+		<input type="button" @click.prevent="reset" value="Reset" />
+		<button @click.prevent="getData">Default</button>
+		<button @click.prevent="sendData">Vue.Submit</button>
+		<button>Form.Submit</button>
+	</form>
+	
+	<fieldset>
+		<legend>Message</legend>
+		<span id="msg"></span>
+	</fieldset>
+</div>
+
+<script src="https://unpkg.com/vue" ></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="https://unpkg.com/axios-mock-adapter/dist/axios-mock-adapter.min.js"></script>
+
+<script>
+	'use strict'
+
+	new Vue({
+		el: "#root",
+		data: {
+			account: 'tj_tsai',
+			password: '123',
+			msg: '',
+		},
+
+		methods: {
+			reset() {
+				this.account = '';
+				this.password = '';
+				document.getElementById('msg').innerHTML = '';
+			},
+
+			// 從遠端取得資料（從後端、資料開放平台等要資料）
+			getData() {
+				let _this = this;
+				let mock = new AxiosMockAdapter(axios);
+
+				// 提供假的資料回傳
+				mock
+				.onGet('my-db.jsp?id=no123')
+				.reply(200, {
+					from_db_account: 'from_db_tj_tsai',
+					from_db_password: 'from_db_123',
+				});
+
+				axios
+				.get('my-db.jsp?id=no123')
+				.then(response => {
+					let msg = '成功接收資料：';
+					msg += `<br> - msg: ${JSON.stringify(response)}`;
+					msg += '<br>';
+					msg += `<br> - status: ${JSON.stringify(response.status)}`;
+					msg += `<br> - config.headers: ${JSON.stringify(response.config.headers)}`;
+					msg += `<br> - data: ${JSON.stringify(response.data)}`;
+					document.getElementById('msg').innerHTML = msg;
+
+					_this.account = response.data.from_db_account;
+					_this.password = response.data.from_db_password;
+				})
+				.catch(err => {
+					let msg = '接收資料失敗：';
+					msg += `<br> - msg: ${err}`;
+					document.getElementById('msg').innerHTML = msg;
+				});
+			},
+
+			// 將資料傳到遠端
+			sendData() {
+				let _this = this;
+				let mock = new AxiosMockAdapter(axios);
+
+				// 提供假的資料回傳
+				mock
+				.onPost('my-db.jsp')
+				.reply(200, {
+					msg: 'Sent, OK!'
+				});
+
+				axios
+				.post('my-db.jsp', {
+					account: this.account,
+					password: this.password,
+				})
+				.then(response => {
+					let msg = '成功傳送資料：';
+					msg += `<br> - msg: ${JSON.stringify(response)}`;
+					msg += '<br>';
+					msg += `<br> - status: ${JSON.stringify(response.status)}`;
+					msg += `<br> - config.headers: ${JSON.stringify(response.config.headers)}`;
+					msg += `<br> - config.data: ${JSON.stringify(response.config.data)}`;
+					msg += `<br> - data: ${JSON.stringify(response.data)}`;
+					document.getElementById('msg').innerHTML = msg;
+
+				})
+				.catch(err => {
+					let msg = '傳送資料失敗：';
+					msg += `<br> - msg: ${err}`;
+					document.getElementById('msg').innerHTML = msg;
+				});
+
+			},
+		}
+	})
+</script>
+
+</body>
+</html>
