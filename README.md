@@ -27,6 +27,9 @@
 - [可帶的 Event Modifiers](https://vuejs.org/v2/guide/events.html#Event-Modifiers)
 - [Key Modifiers](https://vuejs.org/v2/guide/events.html#Key-Modifiers)
 
+## 進階功能實作
+- [A Vue.js upload component powered by simple-uploader.js](https://vuejsexamples.com/a-vue-js-upload-component-powered-by-simple-uploader-js/)
+
 ## 跨站請求問題
 - [Vue.js + Node.js + OpenAPI 帶你一次了解 CORS 跨域請求](https://medium.com/@moojing/vue-js-node-js-openapi-%E5%B8%B6%E4%BD%A0%E4%B8%80%E6%AC%A1%E4%BA%86%E8%A7%A3cors%E8%B7%A8%E5%9F%9F%E8%AB%8B%E6%B1%82-b37cd926551f)
 - [使用跨域代理伺服器(CORS PROXY)，解決讀取第三方網站資料問題﹍實作範例](https://www.wfublog.com/2018/11/js-cors-proxy.html)
