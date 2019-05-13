@@ -1,0 +1,63 @@
+
+<!--
+    https://jeremysu0131.github.io/Vue-js-父子組件溝通-emit-on/
+    主題1：[Vue.js] 父子組件溝通 - $emit / $on
+
+	https://kuro.tw/posts/2017/09/21/VueJS-元件載入模板-template-的幾種方式/
+    主題2：VueJS 元件載入模板 (template) 的幾種方式
+-->
+
+<html>
+<body>
+
+<div id="root" >
+	<div>Hello, world!</div>
+	<!--
+        Note that HTML attributes are case-insensitive and you cannot
+        use v-on to listen to camelCase events when using in-DOM 
+        templates. You should probably use "child-method" instead of 
+        "childMethod".
+    -->
+	<my-child v-on:child-method="parentMethod"></my-child>
+	<p>(請觀察 console 的log)</p>
+</div>
+
+
+
+<script src="https://unpkg.com/vue" ></script>
+
+<script type="text/x-template" id="child">
+	<div>
+		<button @click="handleClick">Call parent</button>
+	</div>
+</script>
+
+<script>
+	'use strict'
+
+	Vue.component("my-child", {
+		template: '#child',
+		methods: {
+			// Button:
+			// -> onclick -> trigger: handleClick
+			// -> handleClick -> emit/trigger: child-method (<--- cross component)
+			// -> v-on:child-method -> invoke/call: parentMethod
+			handleClick() {
+				console.log('@child: hello');
+				this.$emit('child-method');
+			}
+		}
+	});
+
+	new Vue({
+		el: "#root",
+		methods: {
+			parentMethod() {
+				console.log('@parent: hi')
+			},
+		},
+	});
+</script>
+
+</body>
+</html>
