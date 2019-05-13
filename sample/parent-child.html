@@ -11,15 +11,15 @@
 <body>
 
 <div id="root" >
-	<div>Hello, world!</div>
-	<!--
+    <div>Hello, world!</div>
+    <!--
         Note that HTML attributes are case-insensitive and you cannot
         use v-on to listen to camelCase events when using in-DOM 
         templates. You should probably use "child-method" instead of 
         "childMethod".
     -->
-	<my-child v-on:child-method="parentMethod"></my-child>
-	<p>(請觀察 console 的log)</p>
+    <my-child v-on:child-method="parentMethod"></my-child>
+    <p>(請觀察 console 的log)</p>
 </div>
 
 
@@ -27,36 +27,36 @@
 <script src="https://unpkg.com/vue" ></script>
 
 <script type="text/x-template" id="child">
-	<div>
-		<button @click="handleClick">Call parent</button>
-	</div>
+    <div>
+        <button @click="handleClick">Call parent</button>
+    </div>
 </script>
 
 <script>
-	'use strict'
+    'use strict'
 
-	Vue.component("my-child", {
-		template: '#child',
-		methods: {
-			// Button:
-			// -> onclick -> trigger: handleClick
-			// -> handleClick -> emit/trigger: child-method (<--- cross component)
-			// -> v-on:child-method -> invoke/call: parentMethod
-			handleClick() {
-				console.log('@child: hello');
-				this.$emit('child-method');
-			}
-		}
-	});
+    Vue.component("my-child", {
+        template: '#child',
+        methods: {
+            // Button:
+            // -> onclick -> trigger: handleClick
+            // -> handleClick -> emit/trigger: child-method (<--- cross component)
+            // -> v-on:child-method -> invoke/call: parentMethod
+            handleClick() {
+                console.log('@child: hello');
+                this.$emit('child-method');
+            }
+        }
+    });
 
-	new Vue({
-		el: "#root",
-		methods: {
-			parentMethod() {
-				console.log('@parent: hi')
-			},
-		},
-	});
+    new Vue({
+        el: "#root",
+        methods: {
+            parentMethod() {
+                console.log('@parent: hi')
+            },
+        },
+    });
 </script>
 
 </body>
