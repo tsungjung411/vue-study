@@ -28,7 +28,7 @@
 - [Vue.js: 計算屬性 Computed](https://cythilya.github.io/2017/04/15/vue-computed/)
 - [可帶的 Event Modifiers](https://vuejs.org/v2/guide/events.html#Event-Modifiers)
 - [Key Modifiers](https://vuejs.org/v2/guide/events.html#Key-Modifiers)
-- 透過 &lt;v-icon 使用 material icon
+- 透過 &lt;v-icon&gt; 使用 material icon
   - [How to use the new Material Design Icon themes: Outlined, Rounded, Two-Tone and Sharp?
 ](https://stackoverflow.com/questions/50303454/how-to-use-the-new-material-design-icon-themes-outlined-rounded-two-tone-and?noredirect=1&lq=1)
 - 跨站請求問題
