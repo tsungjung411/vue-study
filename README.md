@@ -20,6 +20,8 @@
   - [Vue I18n](https://kazupon.github.io/vue-i18n/started.html#html)
 - [[中] Vue Router](https://router.vuejs.org/zh/)
 
+## 基本功能演練
+- [Todo List: Vue.js Example](https://cythilya.github.io/2017/03/07/todolist-vue-example/)
 
 ## 其他主題討論
 - [Vue.js: data、v-model 與雙向綁定](https://cythilya.github.io/2017/04/14/vue-data-v-model/)
