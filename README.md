@@ -39,6 +39,7 @@
     - [curl.md](https://gist.github.com/subfuzion/08c5d85437d5d4f00e58)
   
 ## 高階功能實作
+- [[Vue] uploader](https://lian-yue.github.io/vue-upload-component/#/en/examples/full)
 - [A Vue.js upload component powered by simple-uploader.js](https://vuejsexamples.com/a-vue-js-upload-component-powered-by-simple-uploader-js/)
 
 
