@@ -4,7 +4,7 @@
 
 <div id="root" >
     <div>Pass Message:</div>
-	<a-person-1 :object-name='"Apple"' />
+    <a-person-1 :object-name='"Apple"' />
 </div>
 
 <script src="https://unpkg.com/vue" ></script>
@@ -13,32 +13,32 @@
 
     Vue.component("a-person-1", {
         template: `<div>訊息1: 東西: {{objectName}}, <a-person-2 :object-name='"[" + objectName + "]"'/></div>`,
-		props: {
-			objectName: String,
-		},
-		created: function() {
-			console.log("@a-person-1: ", this.objectName);
-		}
+        props: {
+            objectName: String,
+        },
+        created: function() {
+            console.log("@a-person-1: ", this.objectName);
+        }
     });
 
     Vue.component("a-person-2", {
         template: `<div>訊息2: 東西: {{objectName}}, <a-person-3 :object-name='"{" + objectName + "}"'/></div>`,
-		props: {
-			objectName: String,
-		},
-		created: function() {
-			console.log("@a-person-2: ", this.objectName);
-		}
+        props: {
+            objectName: String,
+        },
+        created: function() {
+            console.log("@a-person-2: ", this.objectName);
+        }
     });
 
     Vue.component("a-person-3", {
         template: '<div>訊息3: 東西: {{objectName}}</div>',
-		props: {
-			objectName: String,
-		},
-		created: function() {
-			console.log("@a-person-3: ", this.objectName);
-		}
+        props: {
+            objectName: String,
+        },
+        created: function() {
+            console.log("@a-person-3: ", this.objectName);
+        }
     });
 
     new Vue({
@@ -48,4 +48,3 @@
 
 </body>
 </html>
-
