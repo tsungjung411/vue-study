@@ -31,6 +31,7 @@
 - 透過 &lt;v-icon&gt; 使用 material icon
   - [How to use the new Material Design Icon themes: Outlined, Rounded, Two-Tone and Sharp?
 ](https://stackoverflow.com/questions/50303454/how-to-use-the-new-material-design-icon-themes-outlined-rounded-two-tone-and?noredirect=1&lq=1)
+- 透過 :is & &lt;keep-alive&gt; 來達成動態元件佈署](https://cythilya.github.io/2017/10/22/vue-component-dynamic-components/)
 - 跨站請求問題
   - [Vue.js + Node.js + OpenAPI 帶你一次了解 CORS 跨域請求](https://medium.com/@moojing/vue-js-node-js-openapi-%E5%B8%B6%E4%BD%A0%E4%B8%80%E6%AC%A1%E4%BA%86%E8%A7%A3cors%E8%B7%A8%E5%9F%9F%E8%AB%8B%E6%B1%82-b37cd926551f)
   - [使用跨域代理伺服器(CORS PROXY)，解決讀取第三方網站資料問題﹍實作範例](https://www.wfublog.com/2018/11/js-cors-proxy.html)
