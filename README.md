@@ -43,3 +43,6 @@
 - [A Vue.js upload component powered by simple-uploader.js](https://vuejsexamples.com/a-vue-js-upload-component-powered-by-simple-uploader-js/)
 
 
+## Tips
+- html 的屬性定義：```:iconName``` 應定義為 ```:icon-name```
+  > [Vue tip]: Prop "iconname" is passed to component <Anonymous>, but the declared prop name is "iconName". Note that HTML attributes are case-insensitive and camelCased props need to use their kebab-case equivalents when using in-DOM templates. You should probably use "icon-name" instead of "iconName".
