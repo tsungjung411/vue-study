@@ -1,0 +1,86 @@
+<!--
+	https://scotch.io/tutorials/add-v-model-support-to-custom-vuejs-component
+-->
+
+<html>
+<body>
+
+<div id="root" >
+	<div>輸入: {{currentIndex}}</div>
+	<child1 
+		v-model="currentIndex" 
+		@on-manually-change="(outValue) => currentIndex = outValue"
+	>
+		<!-- 
+			Note that HTML attributes are case-insensitive and you 
+			cannot use v-on to listen to camelCase events when using
+			in-DOM templates. You should probably use 
+			"on-manually-change" instead of "onManuallyChange".
+		-->
+	</child1>
+	<div>輸出: {{currentIndex}}</div>
+</div>
+
+<script src="https://unpkg.com/vue" ></script>
+
+<script>
+	Vue.component('child1', {
+		template: `
+			<div style="display: inline-block; padding:0.5em; background: lightyellow; border: 1px solid;">
+				處理中: currentIndex: {{currentIndex}}
+				<br><button @click="decrease">-1 (v-model 自動處理)</button>
+				<button @click="increase">+1 (v-model 自動處理)</button>
+				<button @click="handleManuallyChange">+10 (手動變更)</button>
+			</div>
+		`,
+		props: {
+			currentIndex: Number,
+		},
+		model: {
+			prop: 'currentIndex',
+			event: 'indexChanged'
+		},
+		methods: {
+			// DO NOT change the prop directly.
+			// ------------------------------------------------------
+			// [Vue warn]: Avoid mutating a prop directly since the 
+			// value will be overwritten whenever the parent 
+			// component re-renders. Instead, use a data or computed
+			// property based on the prop's value. Prop being 
+			// mutated: "currentIndex"
+			// ------------------------------------------------------
+			decrease: function() {
+				console.log("> currentIndex:", this.currentIndex);
+				let newIndex = this.currentIndex - 1;
+				console.log("<< currentIndex:", newIndex);
+				this.$emit('indexChanged', newIndex);
+			},
+			increase: function() {
+				console.log("> currentIndex:", this.currentIndex);
+				let newIndex = this.currentIndex + 1;
+				console.log("<< currentIndex:", newIndex);
+				this.$emit('indexChanged', newIndex);
+			},
+			handleManuallyChange: function() {
+				this.$emit('on-manually-change', this.currentIndex + 10);
+			},
+		}
+
+	})
+
+    new Vue({
+        el: "#root",
+		data: {
+			currentIndex: 100,
+		},
+		methods: {
+			onClick(event) {
+				console.log('event:', events);
+			},
+		},
+    });
+</script>
+
+</body>
+</html>
+
