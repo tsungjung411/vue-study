@@ -7,15 +7,15 @@
 
 <h2>Slot: 編譯作用域（Compilation Scope）</h2>
 <ul>
-	<li>注意塞進去的位置</li>
-	<li>注意屬性合併的位置、被捨棄的屬性</li>
+    <li>注意塞進去的位置</li>
+    <li>注意屬性合併的位置、被捨棄的屬性</li>
 </ul>
 
 <div id="root" >
-	<app-parent p1>
-		ABC
-		<app-child c1></app-child>
-	</app-parent>
+    <app-parent p1>
+        ABC
+        <app-child c1></app-child>
+    </app-parent>
 </div>
 
 <script src="https://unpkg.com/vue" ></script>
@@ -23,16 +23,16 @@
 <script>
     Vue.component('app-parent', {
         template: `
-			<div p2>
-            	<div p3>這是父元件</div>
-				
-				A:<slot p4></slot> <!-- p4 被丟棄 -->:B
-			</div>
+            <div p2>
+                <div p3>這是父元件</div>
+                
+                A:<slot p4></slot> <!-- p4 被丟棄 -->:B
+            </div>
         `,
     })
     Vue.component('app-child', {
         template: `
-			<div c2>這是子元件</div>
+            <div c2>這是子元件</div>
         `,
     })
     new Vue({
