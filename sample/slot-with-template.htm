@@ -23,7 +23,7 @@
 <script>
     Vue.component('icon-list', {
         template: `
-            <ul>
+            <ul style="list-style-type: circle">
                 <slot v-for="item in items" :item="item"></slot>
             </ul>
         `,
