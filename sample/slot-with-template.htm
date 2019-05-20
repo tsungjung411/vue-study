@@ -1,0 +1,41 @@
+<!--
+    https://cythilya.github.io/2017/10/11/vue-component-slot/
+-->
+
+<html>
+<body>
+
+<div id="root" >
+	<icon-list :items="['A1', 'B2', 'C3', 'D4', 'E5']">
+		<template scope="props"> <!-- 跟 slot 要 input list -->
+			<li>[icon] {{props.item}}</li>
+		</template>
+		<!--
+			想想看，
+			- 若不加 <template>，要怎麽拿到 {{props.item}}？
+			- list item 的值要怎麽從 items 拿到？
+		-->
+	</icon-list>
+</div>
+
+<script src="https://unpkg.com/vue" ></script>
+
+<script>
+    Vue.component('icon-list', {
+        template: `
+            <ul>
+                <slot v-for="item in items" :item="item"></slot>
+            </ul>
+        `,
+		props: {
+			items: Array,
+		}
+    });
+
+    new Vue({
+        el: "#root",
+    });
+</script>
+
+</body>
+</html>
