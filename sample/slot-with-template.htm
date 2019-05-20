@@ -8,7 +8,7 @@
 <div id="root" >
 	<icon-list :items="['A1', 'B2', 'C3', 'D4', 'E5']">
 		<template scope="props"> <!-- 跟 slot 要 input list -->
-			<li>[icon] {{props.item}}</li>
+			<li>[icon-{{props.index}}] {{props.item}}</li>
 		</template>
 		<!--
 			想想看，
@@ -24,7 +24,7 @@
     Vue.component('icon-list', {
         template: `
             <ul style="list-style-type: circle">
-                <slot v-for="item in items" :item="item"></slot>
+                <slot v-for="item, idx in items" :item="item" :index="idx"></slot>
             </ul>
         `,
 		props: {
