@@ -26,6 +26,7 @@
 - [Vue.js: data、v-model 與雙向綁定](https://cythilya.github.io/2017/04/14/vue-data-v-model/)
 - [Vue.js: 計算屬性 Computed](https://cythilya.github.io/2017/04/15/vue-computed/)
 - [透過 :is & &lt;keep-alive&gt; 來達成動態元件佈署](https://cythilya.github.io/2017/10/22/vue-component-dynamic-components/)
+- [[props] camelCase vs kebab-case](https://cythilya.github.io/2017/05/16/vue-component-prop/)
 
 
 ## 其他主題討論
