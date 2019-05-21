@@ -25,6 +25,7 @@
 - [Todo List: Vue.js Example](https://cythilya.github.io/2017/03/07/todolist-vue-example/)
 - [Vue.js: data、v-model 與雙向綁定](https://cythilya.github.io/2017/04/14/vue-data-v-model/)
 - [Vue.js: 計算屬性 Computed](https://cythilya.github.io/2017/04/15/vue-computed/)
+- [Vue.js: 列表渲染 v-for](https://cythilya.github.io/2017/04/27/vue-list-rendering/)
 - [透過 :is & &lt;keep-alive&gt; 來達成動態元件佈署](https://cythilya.github.io/2017/10/22/vue-component-dynamic-components/)
 - [Slot：單個插槽（Single Slot） / 具名插槽（Named Slots）/ 作用域插槽（Scoped Slots）](https://cythilya.github.io/2017/10/11/vue-component-slot/)
 - [[props] camelCase vs kebab-case](https://cythilya.github.io/2017/05/16/vue-component-prop/)
