@@ -1,0 +1,70 @@
+<html>
+<body>
+
+<div id="root" >
+    this.$store.state.count: {{this.$store.state.count}}
+	<br>
+    computed_count_from_state: {{computed_count_from_state}}
+	<br>
+    computed_count_from_getters: {{computed_count_from_getters}}
+	<br>
+    method_count_from_state(): {{method_count_from_state()}}
+	<br>
+    method_count_from_getters(): {{method_count_from_getters()}}
+	<br>
+    method_count_from_native_getters(): {{method_count_from_native_getters()}}
+	<br>
+    <button @click="click">Increase count1 (indirect)</button>
+</div>
+
+<script src="https://unpkg.com/vue" ></script>
+<script src="https://unpkg.com/vuex" ></script>
+
+<script>
+    const store = new Vuex.Store({
+        state: {
+            count: 100,
+        },
+        mutations: {
+            increment(state) {
+                console.log(">> increment:this.count:", state.count);
+                state.count++;
+                console.log("<< increment:this.count:", state.count);
+            }
+        },
+		getters: {
+			getCount(state) { // treat as a property
+				return state.count;
+			}
+		}
+    })
+    new Vue({
+        el: '#root',
+        store: store,
+        computed: {
+            computed_count_from_state() {
+				return this.$store.state.count
+			},
+            ...Vuex.mapGetters({
+				computed_count_from_getters: 'getCount',
+			}),
+        },
+        methods: {
+            click() {
+                this.$store.commit("increment");
+            },
+            method_count_from_state() {
+				return this.$store.state.count;
+			},
+            ...Vuex.mapGetters({
+				method_count_from_getters: 'getCount',
+			}),
+			method_count_from_native_getters() {
+				return this.$store.getters.getCount;
+			},
+        },
+    });
+</script>
+
+</body>
+</html>
