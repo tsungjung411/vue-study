@@ -31,6 +31,12 @@
 - [[props] camelCase vs kebab-case](https://cythilya.github.io/2017/05/16/vue-component-prop/)
 
 
+## 進階學習問題：
+- [[官網] vuex](https://vuex.vuejs.org/)
+  - Vuex 是 vue.js 應用程式的狀態管理模式
+  - 經典範例：https://jsfiddle.net/n9jmu5v7/1269/
+  - 為何需要 Vuex？考量到「共用API」所提出的模式()
+
 ## 其他主題討論
 - [可帶的 Event Modifiers](https://vuejs.org/v2/guide/events.html#Event-Modifiers)
 - [Key Modifiers](https://vuejs.org/v2/guide/events.html#Key-Modifiers)
