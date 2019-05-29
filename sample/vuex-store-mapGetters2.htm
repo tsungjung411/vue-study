@@ -2,17 +2,14 @@
 <body>
 
 <div id="root" >
-    this.$store.state.count: {{this.$store.state.count}}
+    <h2>A wide variety of mapGetters</h2>
+    <br>this.$store.state.count: {{this.$store.state.count}}
+    <br>computed_count_from_state: {{computed_count_from_state}}
+    <br>computed_count_from_getters: {{computed_count_from_getters}}
+    <br>method_count_from_state(): {{method_count_from_state()}}
+    <br>method_count_from_getters(): {{method_count_from_getters()}}
+    <br>method_count_from_native_getters(): {{method_count_from_native_getters()}}
     <br>
-    computed_count_from_state: {{computed_count_from_state}}
-    <br>
-    computed_count_from_getters: {{computed_count_from_getters}}
-    <br>
-    method_count_from_state(): {{method_count_from_state()}}
-    <br>
-    method_count_from_getters(): {{method_count_from_getters()}}
-    <br>
-    method_count_from_native_getters(): {{method_count_from_native_getters()}}
     <br>
     <button @click="click">Increase count1 (indirect)</button>
 </div>
