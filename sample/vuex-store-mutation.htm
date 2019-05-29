@@ -1,12 +1,17 @@
 <!--
     see https://vuex.vuejs.org/guide/
+
+    dispatch(調度) -> atc  -> action
+    commit(提交)   -> mm   -> mutation
+    mutate(改變)   -> tate -> state
 -->
 <html>
 <body>
 
 <div id="root" >
     count1: {{this.$store.state.count1}}
-	<button @click="click1">Increase count1</button>
+	<button @click="click1">Increase count1 (indirect)</button>
+	<button @click="click1_native">Increase count1 (direct)</button>
     <br>
     count2: {{count2}}
 	<button @click="click2">Decrease count2</button>
@@ -37,9 +42,12 @@
             click1() {
                 this.$store.commit("increment1");
             },
+            click1_native() {
+				this.$store._mutations.increment1[0]();
+            },
             click2() {
                 this.$store.state.count2--;
-            }
+            },
         },
         computed: {
             count2() { return this.$store.state.count2},
