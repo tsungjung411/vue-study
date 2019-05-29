@@ -10,11 +10,11 @@
 
 <div id="root" >
     count1: {{this.$store.state.count1}}
-	<button @click="click1">Increase count1 (indirect)</button>
-	<button @click="click1_native">Increase count1 (direct)</button>
+    <button @click="click1">Increase count1 (indirect)</button>
+    <button @click="click1_native">Increase count1 (direct)</button>
     <br>
     count2: {{count2}}
-	<button @click="click2">Decrease count2</button>
+    <button @click="click2">Decrease count2</button>
 </div>
 
 <script src="https://unpkg.com/vue" ></script>
@@ -43,7 +43,7 @@
                 this.$store.commit("increment1");
             },
             click1_native() {
-				this.$store._mutations.increment1[0]();
+                this.$store._mutations.increment1[0]();
             },
             click2() {
                 this.$store.state.count2--;
