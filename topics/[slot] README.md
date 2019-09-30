@@ -8,7 +8,7 @@
   - 具名插槽 (named slot)
     - ```<slot name="xxx">``` 有指定 name
 - ### slot-scope 屬性
-  - 此 ```<slot>``` 又稱為 Scoped Slots(作用域插槽)
+  - 此 ```<slot>``` 又稱為 作用域插槽(Scoped Slot)
   - 用途1：父類別元件，合併到子類別元件
     - 範例：[[slot] merge layout.htm](../topics/%5Bslot%5D%20merge%20layout.htm)
   - 用途2：顯示客製化清單
