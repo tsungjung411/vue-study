@@ -1,6 +1,5 @@
 ## slot 特性
 - ### 特性1：可以合併父元件與子元件的layout
-  - 此 ```<slot>``` 又稱為 作用域插槽(Scoped Slot)
   - 範例：[[slot] merge layout.htm](../topics/%5Bslot%5D%20merge%20layout.htm)
 - ### name 屬性
   - 說明
