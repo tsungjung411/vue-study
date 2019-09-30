@@ -13,7 +13,7 @@
   - 用途1：父類別元件，合併到子類別元件
   - 用途2：顯示客製化清單
     - 從 ```<slot>``` 端接收資料，再根據資料，客製化自己的 UI
-    - 範例：    
+    - 範例：[[slot][Scoped Slot] slot + slot-scope.htm](../samples/%5Bslot%5D%5BScoped%20Slot%5D%20slot%20+%20slot-scope.htm)
 
 
 ## 參考資料
