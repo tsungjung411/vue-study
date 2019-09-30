@@ -1,14 +1,46 @@
 <html>
 <head>
 	<script src="https://unpkg.com/vue"></script>
+	<script src="https://unpkg.com/vuex"></script>
 </head>
 
 <body>
-<div id="root">
-	<!-- [Step2] 測試定義好的 項目清單 元件，傳入給定資料 items 來測試 -->
-	<item-list :item_list="['Java', 'C', 'C++', 'C#', 'javascript', 'VB']">
-		<!-- [Step5] 測試是否收到 slot 傳入的資料 -->
+<b>請按照 [Step1]~[Step9] 流程走。</b>
 
+<div id="root">
+	<!-- [Step2] 測試定義好的 <item-list> 元件 -->
+	<h3>[Step2] 測試定義好的 &lt;item-list> 元件</h3>
+	<item-list>
+		<!-- 在 Vue 裡，不允許這種用法 <item-list /> -->
+	</item-list>
+
+	<!-- [Step3] 傳入給定的資料 items-->
+	<h3>[Step3] 傳入給定的資料 items = "['Java', 'C', 'C++', 'C#', 'javascript', 'VB']"</h3>
+	<item-list :item_list="['Java', 'C', 'C++', 'C#', 'javascript', 'VB']">
+		<!-- 在 Vue 裡，不允許這種用法 <item-list /> -->
+	</item-list>
+
+	<!-- [Step6] 接收從 slot 傳來的資料，必須使用 template 接收 -->
+	<h3>[Step6] 接收從 slot 傳來的資料，必須使用 template 接收</h3>
+	<item-list :item_list="['Java', 'C', 'C++', 'C#', 'javascript', 'VB']">
+		<template slot-scope="my_item_data">
+			<!-- slot-scope 為 slot 的實體，用「任意名子」來參考它，比如 my_item_data -->
+			{{my_item_data}}
+		</template>
+	</item-list>
+
+	<!-- [Step7] 將資料配上 UI，完工！ -->
+	<h3>[Step7] 將資料配上 UI，完工！</h3>
+	<item-list :item_list="['Java', 'C', 'C++', 'C#', 'javascript', 'VB']">
+		<template slot-scope="my_item_data">
+			<!-- slot-scope 為 slot 的實體，用「任意名子」來參考它，比如 my_item_data -->
+			<span>[{{my_item_data.index}}] {{my_item_data.item}}</span>
+		</template>
+	</item-list>
+
+	<!-- [Step9] 測試 匿名(沒有指定name), 具名(有指定name)的 <slot> -->
+	<h3>[Step9] 測試 匿名(沒有指定name), 具名(有指定name)的 &lt;slot></h3>
+	<item-list2 :item_list="['Java', 'C', 'C++', 'C#', 'javascript', 'VB']">
 		<!-- 底下的 layout，映射到 「名稱為 "this_is_public_slot_name"」的插槽 --> 
 		<template slot="this_is_public_slot_name" slot-scope="my_item_data">
 			<b>[{{my_item_data.index}}] {{my_item_data.item}}</b>
@@ -18,40 +50,70 @@
 		<template slot-scope="my_item_data">
 			<span style="color: lightgray">[{{my_item_data.index}}] {{my_item_data.item}}</span>
 		</template>
+	</item-list2>
 
-	</item-list>
 	{{done_message}}
 </div>
 
 <script>
 	// [Step1] 新增子元件，元件名稱是 item-list，並註冊到 Vue，template 內容暫時為空
+	/*	
+	Vue.component('item-list', {
+		template: `<div>Step1</div>`,
+	});
+	*/
+
+	// [Step4] 印出從父元件傳入的項目清單(item_list)
+	/*
+	Vue.component('item-list', {
+		template: `<div>{{item_list}}</div>`,
+		props: {
+			item_list: Array,
+		}
+	});
+	*/
+
+	// [Step5] 新增簡易 <slot> (未定的 layout)，並把資料傳遞給 <slot>
 	Vue.component('item-list', {
 		template: `
 			<div>
-				<h3>[Step3] 先確認 items 變數是否有資料</h3>
-				items: {{item_list}} ←←← 資料有印出來？
-				<br>
-				若 items 有資料印出來，則往 [Step4] 測試
-				<br>
-				<h3>[Step4] 把資料傳入 slot 元件</h3>
 				<ul>
-					<li>The following slot has no name.</li>
 					<li v-for="item, index in item_list">
-						<slot noname :item="item" :index="index"></slot>
+						<slot :index="index" :item="item" />
+					</li>
+				</ul>
+			</div>
+		`,
+		props: {
+			item_list: Array,
+		}
+	});
+
+	// [Step8] 測試 匿名(沒有指定name), 具名(有指定name)的 <slot>
+	Vue.component('item-list2', {
+		template: `
+			<div>
+				<ul>
+					<li>下面的 slot 沒有指定 name</li>
+					<li v-for="item, index in item_list">
+						<slot noname
+							:item="item" :index="index"></slot>
 					</li>
 
 					<li><hr></li>
 
-					<li>The following slot is called "private_slot"</li>
+					<li>下面的 slot 指定 name 為 "private_slot"</li>
 					<li v-for="item, index in item_list">
-						<slot name="this_is_private_slot_name" :item="item" :index="index"></slot>
+						<slot name="this_is_private_slot_name"
+							:item="item" :index="index" />
 					</li>
 
 					<li><hr></li>
 
-					<li>The following slot is called "public_slot"</li>
+					<li>下面的 slot 指定 name 為 "public_slot"</li>
 					<li v-for="item, index in item_list">
-						<slot name="this_is_public_slot_name" :item="item" :index="index"></slot>
+						<slot name="this_is_public_slot_name" 
+							:item="item" :index="index" />
 					</li>
 				</ul>
 			</div>
