@@ -37,6 +37,11 @@
   - 經典範例：https://jsfiddle.net/n9jmu5v7/1269/
   - 為何需要 Vuex？考量到「共用API」所提出的模式()
 
+
+## 語法問題：
+- [data / props / event](https://ithelp.ithome.com.tw/articles/10188126)
+
+
 ## 其他主題討論
 - [可帶的 Event Modifiers](https://vuejs.org/v2/guide/events.html#Event-Modifiers)
 - [Key Modifiers](https://vuejs.org/v2/guide/events.html#Key-Modifiers)
