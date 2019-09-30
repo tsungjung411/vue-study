@@ -2,12 +2,10 @@
 - ### name 屬性
   - 用途
     - 給 ```<slot>``` 名稱，才能辨識使用哪個 ```<slot>``` 元件
-  - 匿名 slot
+  - 匿名插槽，又稱單一插槽(single slot)
     - ```<slot>``` 沒有指定 name
-    - 又稱為 single slot (單一插槽)
-  - 具名 slot
+  - 具名插槽(named slot)
     - ```<slot name="xxx">``` 有指定 name
-    - 又稱為 named slot (具名插槽)
 - ### slot-scope 屬性
   - 此 ```<slot>``` 又稱為 Scoped Slots(作用域插槽)
   - 用途1：父類別元件，合併到子類別元件
