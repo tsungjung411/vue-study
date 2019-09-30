@@ -12,7 +12,8 @@
     - ```<slot name="xxx">``` 有指定 name
 - ### slot-scope 屬性
   - 用途：顯示客製化清單
-    - 從 ```<slot>``` 端接收資料，再根據資料，客製化自己的 UI
+    - ```slot-scope``` 的值，是指向 ```<slot>``` 實體(instance)的物件變數
+    - 透過該物件變數，就可以從 ```<slot>``` 端取得資料，再根據資料來客製化自己的 UI
   - 範例：[[slot][Scoped Slot] slot + slot-scope.htm](../topics/%5Bslot%5D%5BScoped%20Slot%5D%20slot%20+%20slot-scope.htm)
 
 
