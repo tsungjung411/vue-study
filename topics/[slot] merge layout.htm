@@ -17,9 +17,10 @@
 
 <div id="root" >
     <app-parent p1>
-        A:
+        <!-- 整個子元件被放到 <slot> -->
+        p1:A:
         <app-child c1></app-child>
-        :B
+        :B:p1
     </app-parent>
 </div>
 
@@ -28,7 +29,7 @@
         template: `
             <div p2>
                 <div p3>這是父元件</div>
-                A:<slot p4></slot> <!-- p4 被丟棄 -->:B
+                p2:A:<slot p4></slot> <!-- p4 被丟棄 -->:B:p2
             </div>
         `,
     })
