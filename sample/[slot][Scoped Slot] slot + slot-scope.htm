@@ -1,0 +1,76 @@
+<html>
+<head>
+	<script src="https://unpkg.com/vue"></script>
+	<script src="https://unpkg.com/vuex"></script>
+</head>
+
+<body>
+<div id="root">
+	<!-- [Step2] 測試定義好的 項目清單 元件，傳入給定資料 items 來測試 -->
+	<item-list :item_list="['Java', 'C', 'C++', 'C#', 'javascript', 'VB']">
+		<!-- [Step5] 測試是否收到 slot 傳入的資料 -->
+
+		<!-- 底下的 layout，映射到 「名稱為 "this_is_public_slot_name"」的插槽 --> 
+		<template slot="this_is_public_slot_name" slot-scope="my_item_data">
+			<b>[{{my_item_data.index}}] {{my_item_data.item}}</b>
+		</template>
+
+		<!-- 底下的 layout，映射到 「匿名」的插槽 --> 
+		<template slot-scope="my_item_data">
+			<span style="color: lightgray">[{{my_item_data.index}}] {{my_item_data.item}}</span>
+		</template>
+
+	</item-list>
+	{{done_message}}
+</div>
+
+<script>
+	// [Step1] 新增子元件，元件名稱是 item-list，並註冊到 Vue，template 內容暫時為空
+	Vue.component('item-list', {
+		template: `
+			<div>
+				<h3>[Step3] 先確認 items 變數是否有資料</h3>
+				items: {{item_list}} ←←← 資料有印出來？
+				<br>
+				若 items 有資料印出來，則往 [Step4] 測試
+				<br>
+				<h3>[Step4] 把資料傳入 slot 元件</h3>
+				<ul>
+					<li>The following slot has no name.</li>
+					<li v-for="item, index in item_list">
+						<slot noname :item="item" :index="index"></slot>
+					</li>
+
+					<li><hr></li>
+
+					<li>The following slot is called "private_slot"</li>
+					<li v-for="item, index in item_list">
+						<slot name="this_is_private_slot_name" :item="item" :index="index"></slot>
+					</li>
+
+					<li><hr></li>
+
+					<li>The following slot is called "public_slot"</li>
+					<li v-for="item, index in item_list">
+						<slot name="this_is_public_slot_name" :item="item" :index="index"></slot>
+					</li>
+				</ul>
+			</div>
+		`,
+		props: {
+			item_list: Array,
+		}
+	});
+
+	new Vue({
+		el: "#root",
+		data: () => {
+			return {
+				done_message: "Greet Job!",
+			}
+		}
+	});
+</script>
+	
+</body>
+</html>
