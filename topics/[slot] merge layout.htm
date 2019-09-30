@@ -3,10 +3,14 @@
 -->
 
 <html>
+<head>
+	<script src="https://unpkg.com/vue"></script>
+</head>
 <body>
 
 <h2>Slot: 編譯作用域（Compilation Scope）</h2>
 <ul>
+    <li>p1, p2, p3, c1, c2 分別給 tag 打上標記，檢查標記是否存在</li>
     <li>注意塞進去的位置</li>
     <li>注意屬性合併的位置、被捨棄的屬性</li>
 </ul>
@@ -18,8 +22,6 @@
         :B
     </app-parent>
 </div>
-
-<script src="https://unpkg.com/vue" ></script>
 
 <script>
     Vue.component('app-parent', {
