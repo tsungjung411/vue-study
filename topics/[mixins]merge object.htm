@@ -1,0 +1,117 @@
+<!--
+    https://cythilya.github.io/2017/09/24/vue-mixins/
+-->
+
+<html>
+<head>
+	<script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+
+<h2>Mixin: 合併兩個物件</h2>
+<div id="root">
+	<h3>data</h3>
+	<p>obj3: name: {{name}}
+	<p>obj3: tag1: {{tag1}}
+	<p>obj3: tag2: {{tag2}}
+	<p>obj3: tag3: {{tag3}}
+
+	<h3>methods</h3>
+	<p><button @click="hello">obj3: hello()</button>
+		<button @click="obj1_hello">obj1: hello()</button>
+		<button @click="obj2_hello">obj2: hello()</button>
+	<p><button @click="eat">obj3: eat()</button>
+	<p><button @click="run">obj3: run()</button>
+</div>
+
+<script>
+
+    var obj1 = {
+		data: () => ({
+			name: 'obj1',
+			tag1: 'tag1',
+		}),
+		created() {
+			console.log("obj1: created()");
+		},
+		methods: {
+			hello() {
+				console.log("obj1: hello()");
+			},
+			eat() {
+				console.log("obj1: 喜歡吃東西");
+			},
+		}
+	};
+
+	var obj2 = {
+		data: () => ({
+			name: 'obj2',
+			tag2: 'tag2',
+		}),
+		created() {
+			console.log("obj2: created()");
+		},
+		methods: {
+			hello() {
+				console.log("obj2: hello()");
+			},
+			run() {
+				console.log("obj2: 喜歡跑");
+			},
+		}
+	}
+
+	var common = {
+		data: () => ({
+			name: 'common',
+			tag0: 'tag0',
+		}),
+		created() {
+			let name = this.$options.data.name;
+			console.log("global: created(): name: ", name);
+
+			let hello = this.$options.methods.hello;
+			console.log("global: created(): hello: ", hello);
+			let hello1 = this.$options.mixins[0].methods.hello;
+			console.log("global: created(): hello1: ", hello1);
+			let hello2 = this.$options.mixins[1].methods.hello;
+			console.log("global: created(): hello2: ", hello2);
+			let eat = this.$options.methods.eat;
+			console.log("global: created(): eat: ", eat);
+			let run = this.$options.methods.run;
+			console.log("global: created(): run: ", run);
+
+			console.log("global: created(): this.$options: ", this.$options);
+		}
+	}
+	Vue.mixin(common);
+
+	new Vue({
+		el: '#root',
+		mixins: [obj1, obj2, ],
+		data: () => ({
+			name: 'obj3',
+			tag3: 'tag3',
+		}),
+		created() {
+			console.log("obj3: created()");
+		},
+		methods: {
+			hello() {
+				console.log("obj3: hello()");
+			},
+			obj1_hello() {
+				this.$options.mixins[0].methods.hello();
+			},
+			obj2_hello() {
+				this.$options.mixins[1].methods.hello();
+			},
+
+		}
+	});
+
+</script>
+
+</body>
+</html>
