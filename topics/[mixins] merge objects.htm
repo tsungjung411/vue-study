@@ -17,6 +17,7 @@
 	<p>obj3: tag3: {{tag3}}
 
 	<h3>methods</h3>
+	<p><button @click="base">obj3: base()</button>
 	<p><button @click="hello">obj3: hello()</button>
 		<button @click="obj1_hello">obj1: hello()</button>
 		<button @click="obj2_hello">obj2: hello()</button>
@@ -35,6 +36,9 @@
 			console.log("obj1: created()");
 		},
 		methods: {
+			base() {
+				console.log("obj1: base()");
+			},
 			hello() {
 				console.log("obj1: hello()");
 			},
@@ -53,6 +57,9 @@
 			console.log("obj2: created()");
 		},
 		methods: {
+			base() {
+				console.log("obj2: base()");
+			},
 			hello() {
 				console.log("obj2: hello()");
 			},
@@ -89,7 +96,7 @@
 
 	new Vue({
 		el: '#root',
-		mixins: [obj1, obj2, ],
+		mixins: [obj1, obj2, ], // 後面的 obj2.method，會蓋掉前面的 obj1.method
 		data: () => ({
 			name: 'obj3',
 			tag3: 'tag3',
@@ -98,6 +105,7 @@
 			console.log("obj3: created()");
 		},
 		methods: {
+			// @Override
 			hello() {
 				console.log("obj3: hello()");
 			},
