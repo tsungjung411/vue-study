@@ -32,6 +32,7 @@
 - [透過 :is & &lt;keep-alive&gt; 來達成動態元件佈署](https://cythilya.github.io/2017/10/22/vue-component-dynamic-components/)
 - [Slot：單個插槽（Single Slot） / 具名插槽（Named Slots）/ 作用域插槽（Scoped Slots）](https://cythilya.github.io/2017/10/11/vue-component-slot/)
 - [[props] camelCase vs kebab-case](https://cythilya.github.io/2017/05/16/vue-component-prop/)
+- [Vue.js: Mixins](https://cythilya.github.io/2017/09/24/vue-mixins/)
 
 
 ## 進階學習問題：
