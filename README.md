@@ -9,6 +9,7 @@
 
 ## 我的文件
 - [slot](topics/slot.md)
+- [mixin](topics/mixin.md)
 
 
 ## 基礎學習資源
