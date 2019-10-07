@@ -8,8 +8,8 @@
   - Vue-i18n CDN: https://unpkg.com/vue-i18n (locale/language/internationalization)
 
 ## 我的文件
-- [slot](topics/slot.md)
-- [mixin](topics/mixin.md)
+- [slot](topics/%5Bslot%5D%20README.md)
+- [mixins](topics/%5Bmixins%5D%20README.md)
 
 
 ## 基礎學習資源
