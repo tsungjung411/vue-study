@@ -41,7 +41,15 @@
   - Vuex 是 vue.js 應用程式的狀態管理模式
   - 經典範例：https://jsfiddle.net/n9jmu5v7/1269/
   - 為何需要 Vuex？考量到「共用API」所提出的模式()
-
+- Axios
+  - [axios 基本使用 & Config](https://ithelp.ithome.com.tw/articles/10212120)
+    ```javascript
+    const config = {
+        // 用來判斷是否為 跨域存取 (cross-site Access-Control requests)
+        // 等同 Access-Control-Allow-Credentials 表頭
+        // 用來解決 CORS
+        withCredentials: false, // default
+    ```
 
 ## 語法問題：
 - [data / props / event](https://ithelp.ithome.com.tw/articles/10188126)
