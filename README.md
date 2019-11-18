@@ -67,6 +67,7 @@
     - [這是一個簡單、免費的跨域代理伺服器<br>https://cors-anywhere.herokuapp.com/](https://cors-anywhere.herokuapp.com/)
   - 驗證工具：
     - [curl.md](https://gist.github.com/subfuzion/08c5d85437d5d4f00e58)
+  - 特殊解法？[Using CORS](https://www.html5rocks.com/en/tutorials/cors/)
   
 ## 高階功能實作
 - [[Vue] uploader](https://lian-yue.github.io/vue-upload-component/#/en/examples/full)
