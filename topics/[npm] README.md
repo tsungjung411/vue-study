@@ -44,11 +44,40 @@
   ```
   
 - ```npm list```
-  > 列出當前專案(local)已安裝的套件，及其版本
+  > 列出當前專案(local)已安裝的所有套件(包含子套件)，及其版本
   
 - ```npm list -g```
-  > 列出系統(global)已安裝的套件，及其版本
+  > 列出系統(global)已安裝的所有套件(包含子套件)，及其版本
   
+- ```npm list --depth=0```
+  > 列出當前專案(local)已安裝的所有套件(不含子套件)，及其版本
+  ```
+  vue-todos@1.0.0 /home/tj/Downloads/vue1120/vue-todos
+  ├── babel-core@6.26.3
+  ├── babel-loader@7.1.5
+  ├── babel-preset-env@1.7.0
+  ├── babel-preset-stage-3@6.24.1
+  ├── cross-env@5.2.1
+  ├── css-loader@3.2.0
+  ├── file-loader@1.1.11
+  ├── vue@2.6.10
+  ├── vue-loader@13.7.3
+  ├── vue-template-compiler@2.6.10
+  ├── UNMET PEER DEPENDENCY webpack@4.41.2
+  └── webpack-dev-server@2.11.5
+  ```
+
+- ```npm list --depth=0 -g```
+  > 列出系統(global)已安裝的所有套件(不含子套件)，及其版本
+  ```
+  /usr/lib
+  ├── npm@6.13.1
+  ├── vue-cli@2.9.6
+  ├── webpack@4.41.2
+  ├── webpack-cli@3.3.10
+  └── webpack-dev-server@3.9.0
+  ```
+
 - ```npm list webpack-dev-server```
   > 列出當前專案(local)已安裝的 webpack-dev-server 套件，及其版本
   ```
