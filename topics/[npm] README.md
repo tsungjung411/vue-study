@@ -139,6 +139,10 @@ npm run dev
 - 原因
   > webpack/bin/config-yargs has been moved to webpack-cli/bin/config-yargs.
 - 解法
+  - 安裝 webpack-cli
+    ```
+    npm install webpack-cli
+    ```
   - 修改 package.json
     - Before: ```"webpack-dev-server": "^2.9.1"```
     - After: ```"webpack-dev-server": "^3.9.0"```
