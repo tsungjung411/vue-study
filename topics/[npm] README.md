@@ -52,10 +52,15 @@
 ## npm install (同 npm i)
 - ```npm help install``` (同 ```npm help i```)
   > 印出指令說明
+  
+- ```npm install``` (同 ```npm i```)
+  > 安裝 package.json 所定義的相關套件
+  
 - ```npm install moment``` (同 ```npm i moment```)
-  > 安裝：日期時間格式化的專用套件 moment.js
+  > 安裝：日期時間格式化的專用套件 moment.js，並更新到 package.json
+  
 - ```npm install vuetify``` (同 ```npm i vuetify```)
-  > 安裝：安裝 vue 的美化(beautify)UI
+  > 安裝：安裝 vue 的美化(beautify)UI，並更新到 package.json
 
 <br>
   
