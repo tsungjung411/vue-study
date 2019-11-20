@@ -140,17 +140,28 @@ npm run dev
   > webpack/bin/config-yargs has been moved to webpack-cli/bin/config-yargs.
 - 解法
   - 修改 package.json
-    - Before
-      ```
-      "webpack-dev-server": "^2.9.1"
-      ```
-    - After
-      ```
-      package.json
-      "webpack-dev-server": "^2.9.1"
-      ```
+    - Before: ```"webpack-dev-server": "^2.9.1"```
+    - After: ```"webpack-dev-server": "^3.9.0"```
   - 更新 package.json
     ```
     $ npm install
     ```
-  
+    <br>
+### vue-loader: build failed
+- 問題
+  ```
+  ERROR in ./src/App.vue
+  Module build failed (from ./node_modules/vue-loader/index.js):
+  TypeError: Cannot read property 'vue' of undefined
+      at Object.module.exports (/home/tj/Downloads/vue1120/vue-todos/node_modules/vue-loader/lib/loader.js:61:18)
+   @ ./src/main.js 2:0-28 7:13-16
+  ```
+- 解法
+  - 修改 package.json
+    - Before: ```"vue-loader": "^13.0.5",```
+    - After: ```"vue-loader": "14.2.4",```
+  - 更新 package.json
+    ```
+    $ npm install
+    ```
+    <br>
