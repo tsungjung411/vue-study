@@ -49,7 +49,7 @@
   
 <br>
   
-## 下載並建立一個 todo 範本
+## 下載並建立一個 todo 範本 (相當於 Hello World 的空界面)
 ```bash
 # 安裝 vue-cli 套件到 global, 因此就可以在任意的 terminal 中，直接使用 vue 指令
 # 若已經安裝過 vue-cli 套件，就可以略過此指令
