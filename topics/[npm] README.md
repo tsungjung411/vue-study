@@ -1,8 +1,14 @@
 ## 相關術語
 - cli
-  - en: command-line interface
-  - cht: 命令列介面
-  - chs: 腳手架（用途：脚手架是帮你减少「为减少重复性工作而做的重复性工作」）
+  - 翻譯
+    - en: command-line interface
+    - cht: 命令列介面
+    - chs: 腳手架
+  - 用途
+    - [脚手架是帮你减少「为减少重复性工作而做的重复性工作」](https://www.zhihu.com/question/47731497)
+  - 相關工具
+    - vue-cli
+    - webpack-cli
 
 <br>
 
