@@ -109,7 +109,7 @@
 
 <br>
   
-## 下載並建立一個 todo 範本 (相當於 Hello World 的空界面)
+## 下載並建立一個 todo 範本 (相當於 Hello World 的空專案)
 ```bash
 # 安裝 vue-cli 套件到 global, 因此就可以在任意的 terminal 中，直接使用 vue 指令
 # 若已經安裝過 vue-cli 套件，就可以略過此指令
@@ -126,10 +126,31 @@ npm install
 npm run dev
 ```
 
+<br>
+
 ## 故障排除
-### webpack/bin/config-yargs
+### [webpack/bin/config-yargs](https://github.com/mzgoddard/jest-webpack/issues/27)
+- 問題
   ```
   Error: Cannot find module 'webpack/bin/config-yargs'
   Require stack:
   - /home/tj/Downloads/vue1120/vue-todos/node_modules/webpack-dev-server/bin/webpack-dev-server.js
   ```
+- 原因
+  > webpack/bin/config-yargs has been moved to webpack-cli/bin/config-yargs.
+- 解法
+  - 修改 package.json
+    - Before
+      ```
+      "webpack-dev-server": "^2.9.1"
+      ```
+    - After
+      ```
+      package.json
+      "webpack-dev-server": "^2.9.1"
+      ```
+  - 更新 package.json
+    ```
+    $ npm install
+    ```
+  
