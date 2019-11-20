@@ -42,10 +42,26 @@
     zlib: '1.2.11'
   }
   ```
+  
 - ```npm list```
-  > for local packages (但跟 -g 好像沒有差別)
+  > 列出當前專案(local)已安裝的套件，及其版本
+  
 - ```npm list -g```
-  > for globally installed packages
+  > 列出系統(global)已安裝的套件，及其版本
+  
+- ```npm list webpack-dev-server```
+  > 列出當前專案(local)已安裝的 webpack-dev-server 套件，及其版本
+  ```
+  vue-todos@1.0.0 /home/tj/Downloads/vue1120/vue-todos
+  └── webpack-dev-server@2.11.5 
+  ```
+  
+- ```npm list webpack-dev-server -g```
+  > 列出系統(global)已安裝的 webpack-dev-server 套件，及其版本
+  ```
+  /usr/lib
+  └── webpack-dev-server@3.9.0
+  ```
 
 <br>
 
