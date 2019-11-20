@@ -32,14 +32,28 @@
   > for local packages (但跟 -g 好像沒有差別)
 - ```npm list -g```
   > for globally installed packages
-  
+
+<br>
+
 ## npm install (同 npm i)
 - ```npm help install``` (同 ```npm help i```)
   > 印出指令說明
   
+<br>
+  
 ## 下載並建立一個 todo 範本
-```
+```bash
 # 安裝 vue-cli 套件到 global, 因此就可以在任意的 terminal 中，直接使用 vue 指令
 # 若已經安裝過 vue-cli 套件，就可以略過此指令
 npm install vue-cli -g   # npm i vue-cli -g
+
+# 從 webpack-simple 範本中，下載 vue-todos 專案
+vue init webpack-simple vue-todos
+
+# 在 vue-todos 專案中，安裝 package.json 所定義的相關套件
+cd vue-todos
+npm install
+
+# 在 vue-todos 專案中，執行 package.json 所定義的 scripts 檔
+npm run dev
 ```
