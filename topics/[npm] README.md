@@ -1,3 +1,11 @@
+## 相關術語
+- cli
+  - en: command-line interface
+  - cht: 命令列介面
+  - chs: 腳手架（用途：脚手架是帮你减少「为减少重复性工作而做的重复性工作」）
+
+<br>
+
 ## npm
 - ```npm -v```
   > 印出 npm 版本
