@@ -52,7 +52,11 @@
 ## npm install (同 npm i)
 - ```npm help install``` (同 ```npm help i```)
   > 印出指令說明
-  
+- ```npm install moment``` (同 ```npm i moment```)
+  > 安裝：日期時間格式化的專用套件 moment.js
+- ```npm install vuetify``` (同 ```npm i vuetify```)
+  > 安裝：安裝 vue 的美化(beautify)UI
+
 <br>
   
 ## 下載並建立一個 todo 範本 (相當於 Hello World 的空界面)
