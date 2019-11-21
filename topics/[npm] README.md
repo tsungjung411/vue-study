@@ -107,6 +107,26 @@
 - ```npm install vuetify``` (同 ```npm i vuetify```)
   > 安裝：安裝 vue 的美化(beautify)UI，並更新到 package.json
 
+- 參數
+  - ```-g``` (置放該參數，沒有位置順序問題)
+    > 通常用在安裝指令 npm install -g 指令 (或 npm install 指令 -g)
+    > 表示將此指令，安裝到 node.js 的全域執行目錄下
+    > 於是，它能在本機的任意目錄下執行該指令
+    ```
+    tj@tj-M52AD-M12AD-A-F-K31AD:~$ vue
+    Usage: vue <command> [options]
+
+    Options:
+      -V, --version  output the version number
+      -h, --help     output usage information
+
+    Commands:
+      init           generate a new project from a template
+      list           list available official templates
+      build          prototype a new project
+      create         (for v3 warning only)
+      help [cmd]     display help for [cmd]
+    ```
 <br>
   
 ## 下載並建立一個 todo 範本 (相當於 Hello World 的空專案)
