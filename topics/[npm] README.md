@@ -95,9 +95,11 @@
 <br>
 
 ## npm install (同 npm i)
+> 安裝 npm 指令或套件
 - ```npm help install``` (同 ```npm help i```)
-  > 印出指令說明
-  
+  > 印出 npm install 指令說明
+
+### npm install 套件
 - ```npm install``` (同 ```npm i```)
   > 安裝 package.json 所定義的相關套件
   
@@ -105,8 +107,9 @@
   > 安裝：日期時間格式化的專用套件 moment.js，並更新到 package.json
   
 - ```npm install vuetify``` (同 ```npm i vuetify```)
-  > 安裝：安裝 vue 的美化(beautify)UI，並更新到 package.json
+  > 安裝：vue 的美化(beautify) UI，並更新到 package.json
 
+### npm install 指令
 - 參數
   - ```-g``` (置放該參數，沒有位置順序問題)
     > 通常用在安裝指令 npm install -g 指令 (或 npm install 指令 -g)
@@ -127,6 +130,10 @@
       create         (for v3 warning only)
       help [cmd]     display help for [cmd]
     ```
+  
+- ```npm install vue-cli -g``` (同 ```npm i vue-cli -g```)
+  > 安裝 vue-cli 指令
+
 <br>
   
 ## 下載並建立一個 todo 範本 (相當於 Hello World 的空專案)
