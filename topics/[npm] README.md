@@ -113,8 +113,8 @@
 - 參數
   - ```-g``` (置放該參數，沒有位置順序問題)
     > 通常用在安裝指令 npm install -g 指令 (或 npm install 指令 -g)
-    > 表示將此指令，安裝到 node.js 的全域執行目錄下
-    > 於是，它能在本機的任意目錄下執行該指令
+    > <br>表示將此指令，安裝到 node.js 的全域執行目錄下
+    > <br>於是，它能在本機的任意目錄下執行該指令
     ```
     tj@tj-M52AD-M12AD-A-F-K31AD:~$ vue
     Usage: vue <command> [options]
