@@ -142,7 +142,7 @@
 # 若已經安裝過 vue-cli 套件，就可以略過此指令
 npm install vue-cli -g   # npm i vue-cli -g
 
-# 從 webpack-simple 範本中，下載 vue-todos 專案
+# 使用 webpack-simple 官方範本來建立一個小專案，並將專案命名成 vue-todos 
 vue init webpack-simple vue-todos
 
 # 在 vue-todos 專案中，安裝 package.json 所定義的相關套件
