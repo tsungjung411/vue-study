@@ -1,0 +1,40 @@
+<html>
+<head>
+	<script src="https://unpkg.com/vue"></script>
+	<script src="https://unpkg.com/vuex"></script>
+</head>
+
+<body>
+<div id="root">
+	{{ greeting }}, my name is 
+	<input type="text" v-model="first_name" size="8" style="font-family: monospace;">.
+	<br>I am {{ age }} years old.
+</div>
+
+<script>
+	const store = new Vuex.Store({
+		state: {
+			age: 25,
+		},
+	});
+
+	new Vue({
+		el: "#root",
+		store, // i.e. store: store,
+		data: () => {
+			return {
+				greeting: "Hello",
+				first_name: "tj_tsai",
+			}
+		},
+		computed: {
+			// incorrect form: age: () => {...}
+			age() {
+				return this.$store.state.age;
+			},
+		},
+	});
+</script>
+	
+</body>
+</html>
