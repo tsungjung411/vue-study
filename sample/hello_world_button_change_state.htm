@@ -1,0 +1,47 @@
+<html>
+<head>
+	<script src="https://unpkg.com/vue"></script>
+	<script src="https://unpkg.com/vuex"></script>
+</head>
+
+<body>
+
+<div id="app" >
+	<p>Loading: {{ currentLoadingState }}, {{isLoading}}</p>
+	<button v-on:click="reverseState">Reverse state</button><br>
+	<button @click="reverseState">Reverse state</button>
+</div>
+
+<script>
+	const store = new Vuex.Store({
+		state: {
+			isLoading: false,
+		},
+		mutations: {
+			reverseState(state) {
+				state.isLoading = !state.isLoading;
+			}
+		}
+	});
+
+	new Vue({
+		el: "#app",
+		store,
+		computed: {
+			currentLoadingState() {
+				return this.$store.state.isLoading;
+			},
+			isLoading() {
+				return this.$store.state.isLoading;
+			},
+		},
+		methods: {
+			reverseState() {
+				this.$store.commit("reverseState")
+			}
+		}
+	})
+</script>
+
+</body>
+</html>
